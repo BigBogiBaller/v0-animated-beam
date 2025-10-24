@@ -37,13 +37,11 @@ export default function AnimatedBeamDemo() {
   const div9Ref = useRef<HTMLDivElement>(null)
   const div10Ref = useRef<HTMLDivElement>(null)
   const div11Ref = useRef<HTMLDivElement>(null)
-  const div12Ref = useRef<HTMLDivElement>(null)
-  const div13Ref = useRef<HTMLDivElement>(null)
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center p-10">
       <div
-        className="relative flex h-[700px] w-full max-w-4xl items-center justify-center overflow-hidden rounded-lg border bg-background p-10 md:shadow-xl"
+        className="relative flex h-[600px] w-full max-w-4xl items-center justify-center overflow-hidden rounded-lg border bg-background p-10 md:shadow-xl"
         ref={containerRef}
       >
         <div className="flex size-full flex-col items-stretch justify-between gap-10">
@@ -87,14 +85,6 @@ export default function AnimatedBeamDemo() {
               <Icons.tether />
             </Circle>
           </div>
-          <div className="flex flex-row items-center justify-between">
-            <Circle ref={div12Ref}>
-              <Icons.sepa />
-            </Circle>
-            <Circle ref={div13Ref}>
-              <Icons.amex />
-            </Circle>
-          </div>
         </div>
 
         <div ref={div4Ref} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 size-4" />
@@ -109,8 +99,6 @@ export default function AnimatedBeamDemo() {
         <AnimatedBeam containerRef={containerRef} fromRef={div9Ref} toRef={div4Ref} />
         <AnimatedBeam containerRef={containerRef} fromRef={div10Ref} toRef={div4Ref} />
         <AnimatedBeam containerRef={containerRef} fromRef={div11Ref} toRef={div4Ref} />
-        <AnimatedBeam containerRef={containerRef} fromRef={div12Ref} toRef={div4Ref} />
-        <AnimatedBeam containerRef={containerRef} fromRef={div13Ref} toRef={div4Ref} />
       </div>
     </div>
   )
