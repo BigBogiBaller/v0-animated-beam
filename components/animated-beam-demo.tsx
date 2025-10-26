@@ -12,7 +12,7 @@ const Circle = forwardRef<HTMLDivElement, { className?: string; children?: React
       <div
         ref={ref}
         className={cn(
-          "z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
+          "z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-1 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
           className,
         )}
       >
@@ -54,7 +54,7 @@ export default function AnimatedBeamDemo() {
             </Circle>
           </div>
           <div className="flex flex-row items-center justify-between">
-            <Circle ref={div8Ref}>
+            <Circle ref={div8Ref} className="p-0">
               <Icons.whatsapp />
             </Circle>
             <Circle ref={div10Ref}>
@@ -70,7 +70,7 @@ export default function AnimatedBeamDemo() {
             </Circle>
           </div>
           <div className="flex flex-row items-center justify-between">
-            <Circle ref={div9Ref}>
+            <Circle ref={div9Ref} className="p-0">
               <Icons.amex />
             </Circle>
             <Circle ref={div11Ref}>
